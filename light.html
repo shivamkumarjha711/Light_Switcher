@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light(On/Off) Project</title>
+    <style>
+        .Bulb {
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+            height: 500px;
+            width: 500px;
+        }
+        .btn {
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <img id="bulb" src="https://st.depositphotos.com/1020618/2357/i/600/depositphotos_23575953-stock-photo-light-bulb.jpg" alt="Off Bulb" class="Bulb">
+    <button id="toggleBtn" class="Bulbs btn">Turn On</button>
+
+    <script>
+        const btn = document.getElementById("toggleBtn")
+        const bulb = document.getElementById("bulb")
+
+        btn.addEventListener("click", toggleBulb)
+
+        function toggleBulb(e) {
+            if (btn.textContent.includes("On")) {
+                bulb.src = "https://i.pinimg.com/736x/9d/8c/d0/9d8cd0de1fdf89406909485b66f80328.jpg"
+                btn.innerText = "Turn Off"
+            } else {
+                bulb.src = "https://st.depositphotos.com/1020618/2357/i/600/depositphotos_23575953-stock-photo-light-bulb.jpg"
+                btn.innerText = "Turn On"
+            }
+ 
+
+            // if (btn.innerText === "Turn On") {
+            //     bulb.src = "https://i.pinimg.com/736x/9d/8c/d0/9d8cd0de1fdf89406909485b66f80328.jpg"
+            //     btn.innerText = "Turn Off"
+            // } else {
+            //     bulb.src = "https://st.depositphotos.com/1020618/2357/i/600/depositphotos_23575953-stock-photo-light-bulb.jpg"
+            //     btn.innerText = "Turn On"
+            // } 
+        }
+    </script>
+</body>
+</html>
